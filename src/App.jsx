@@ -5,7 +5,10 @@ import Maped from "./components/Maped";
 import { useEffect, useState } from "react";
 import IpAddresInfo from "./components/IpAddresInfo";
 
+
+
 function App() {
+
   const [position, setPosition] = useState();
 
   //? Manejo de form

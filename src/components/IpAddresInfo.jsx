@@ -2,7 +2,7 @@
 
 const IpAddresInfo = ({ location }) => {
 
-    console.log(location);
+   
   return (
    <div className='ipaddres__location'>
     <div>

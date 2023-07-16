@@ -51,7 +51,7 @@ const Maped = ({ location, error }) => {
     <div className="main__map__container">
     
     
-      error ? <div ref={mapContainer} className="map-container" />
+   <div ref={mapContainer} className="map-container" />
     
       
     </div>

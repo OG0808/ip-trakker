@@ -51,6 +51,7 @@ h1 {
   justify-content: center;
   align-items: center;
   background-image: url(../public/pattern-bg-mobile.png);
+
 }
 
 form {
@@ -77,8 +78,6 @@ form > button {
   background-color: black;
   color: white;
 }
-
-
 
 .ipaddres__info {
   background-color: white;
@@ -108,96 +107,97 @@ form > button {
 @media only screen and (min-width: 600px) {
   .ipaddres__info {
     width: 550px;
-    transition: .3s;
+    transition: 0.3s;
   }
   .ipaddres__location {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 1rem;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   form > input {
-   width: 400px;
-   transition: .3s;
+    width: 400px;
+    transition: 0.3s;
   }
 
   .map-container {
-    transition: .3s;
+    transition: 0.3s;
     width: 460px;
   }
-  
+  .ipaddres__form {
 
+    background-image: url(../public/pattern-bg-desktop.png);
+   background: cover;
+
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 768px) {
   .ipaddres__info {
     width: 690px;
-    transition: .3s;
+    transition: 0.3s;
   }
   .ipaddres__location {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 1rem;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   .map-container {
     margin-top: 6rem;
- 
+
     width: 650px;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   form > input {
     width: 500px;
-    transition: .3s;
-   }
+    transition: 0.3s;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 1440px) {
-    .ipaddres__info {
-        width: 790px;
-        transition: .3s;
-      }
-      .ipaddres__location {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding: 1rem;
-        transition: .3s;
-      }
-    
-      .map-container {
-        margin-top: 6rem;
-       
-        width: 1300px;
-        margin-bottom: 1rem;
-        transition: .3s;
-      }
-    
-      form > input {
-        width: 500px;
-        transition: .3s;
-       }
+  .ipaddres__info {
+    width: 790px;
+    transition: 0.3s;
+  }
+  .ipaddres__location {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem;
+    transition: 0.3s;
+  }
 
+  .map-container {
+    margin-top: 6rem;
+
+    width: 1300px;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+  }
+
+  form > input {
+    width: 500px;
+    transition: 0.3s;
+  }
 }
 
-
 @media only screen and (min-width: 1920px) {
-    .map-container {
-        margin-top: 6rem;
-        
-        width: 1800px;
-        height: 600px;
-        margin-bottom: 1rem;
-        transition: .3s;
-      }
+  .map-container {
+    margin-top: 6rem;
 
+    width: 1800px;
+    height: 600px;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
