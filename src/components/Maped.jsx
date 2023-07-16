@@ -5,20 +5,24 @@ import "mapbox-gl/dist/mapbox-gl.css";
 mapboxgl.accessToken =
   "pk.eyJ1Ijoib29vZ2dnIiwiYSI6ImNsazU0djRjczEzNDgzdG8xejFmMjhwYmUifQ.d-DdHWmAQPugYvLQ9jdy-Q";
 
-const Maped = ({ location, error }) => {
-  console.log(location);
+const Maped = ({ location, currentPosition }) => {
+  console.log(currentPosition);
   const mapContainer = useRef();
   const map = useRef();
   const marker = useRef();
+  const [lng, setLng] = useState(-20.9);
+  const [lat, setLat] = useState(22.35);
+  const [zoom, setZoom] = useState(9);
 
   useEffect(() => {
     if (
       !location ||
       location.latitude === undefined ||
       location.longitude === undefined ||
-      location.latitude ===  "Not found") {
-        return ;
-      } 
+      location.latitude === "Not found"
+    ) {
+      return;
+    }
 
     if (!map.current) {
       // Inicializar el mapa solo una vez
@@ -44,16 +48,9 @@ const Maped = ({ location, error }) => {
     }
   }, [location]);
 
-
-
-
   return (
     <div className="main__map__container">
-    
-    
-   <div ref={mapContainer} className="map-container" />
-    
-      
+      <div ref={mapContainer} className="map-container" />
     </div>
   );
 };

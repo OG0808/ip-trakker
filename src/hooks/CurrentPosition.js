@@ -19,5 +19,3 @@ const options = {
   
   navigator.geolocation.getCurrentPosition(success, error, options);
   
-
-  export default options

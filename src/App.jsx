@@ -4,6 +4,7 @@ import useFecth from "./hooks/useFetch";
 import Maped from "./components/Maped";
 import { useEffect, useState } from "react";
 import IpAddresInfo from "./components/IpAddresInfo";
+import CurrentPosition from "./components/CurrentPosition";
 
 
 
@@ -27,6 +28,7 @@ function App() {
   const url = `https://geolocation-db.com/json/f2e84010-e1e9-11ed-b2f8-6b70106be3c8/${ipAddress}`;
   const url2 = `https://geo.ipify.org/api/v2/country,city?apiKey=at_zpQJ3faTg4xMRcEN3yhSTqUwG9SOv&ipAddress=${ipAddress}`;
   const [location, getLocation] = useFecth(url);
+  const [currentPosition, setCurrentPosition] = useState()
 
   useEffect(() => {
     getLocation()?.catch(() => {
@@ -35,10 +37,6 @@ function App() {
   }, [position]);
 
   //!Manejando el error de la ip no valida
-
-  
-
-  
 
   return (
     <div className="ipaddres">
@@ -51,11 +49,13 @@ function App() {
           </button>
         </form>
         <div className="ipaddres__info">
-          <IpAddresInfo location={location} />
+          <IpAddresInfo location={location}
+           />
         </div>
       </div>
-
-      <Maped location={location} />
+     <CurrentPosition setCurrentPosition={setCurrentPosition}/>
+      <Maped location={location}
+      currentPosition={currentPosition} />
     </div>
   );
 }
